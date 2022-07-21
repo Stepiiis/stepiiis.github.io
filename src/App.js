@@ -1,24 +1,24 @@
 import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+
+import React from "react";
+import Project from './comps/Project';
+import Navbar from './comps/Navbar';
+import About from './comps/About';
+import Skills from './comps/Skills';
+import Contact from "./comps/Contact";
+import {createContext,useEffect,useState} from "react";
 
 function App() {
+  const [projects,setProjects] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <main className="text-gray-400 bg-gray-900 body-font">
+        <Navbar />
+        <About />
+        <Project />
+        <Skills />
+        <Contact />
+      </main>
   );
 }
 
